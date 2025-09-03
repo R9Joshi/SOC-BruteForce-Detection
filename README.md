@@ -20,6 +20,15 @@ Detection &amp; Incident Response of Brute Force Attacks using SIEM (CSA Project
 ## Implementation
 
   ### Step 1: Log Generation
-- Simulated brute force attempts by entering wrong SSH/Windows credentials multiple times.
-- Linux: Checked `/var/log/auth.log` for "Failed password" entries.
-- Windows: Checked Event Viewer → Security Logs for Event ID 4625 (failed login).
+   - Simulated brute force attempts by entering wrong SSH/Windows credentials multiple times.
+   - Linux: Checked `/var/log/auth.log` for "Failed password" entries.
+   - Windows: Checked Event Viewer → Security Logs for Event ID 4625 (failed login).
+
+
+  ### Step 2: Log Ingestion into SIEM
+   - Configured Splunk Universal Forwarder to collect system logs.
+   - Ingested logs into Splunk index and verified log flow.
+
+### Step 3: Correlation Rule / Search Query
+   - Created a Splunk query:
+  
